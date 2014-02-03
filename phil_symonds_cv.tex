@@ -1,0 +1,327 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[letterpaper,11pt]{article}
+%\documentclass[]{friggeri-cv}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+\definecolor{mygrey}{gray}{0.80}
+\definecolor{mygrey2}{gray}{0.30}
+\usepackage{ textcomp }
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0.1in}
+
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large
+\colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1
+\vphantom{p\^{E}}}}\end{minipage}}}\vspace{6pt}}
+
+%or from friggeri
+%%%%%%%%%%%%%%%%%%%%
+% List environment %
+%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\tabcolsep}{0pt}
+\newenvironment{entrylist}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+% \renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\entry}[4]{%
+  \textit{#1}&\parbox[t]{14.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    %{\footnotesize\addfontfeature{Color=lightgray}% #3}\\
+    {\footnotesize \textit{\textcolor{mygrey2}{#3}}}\\%
+    #4\vspace{12pt}%
+  }\\}
+  
+\newcommand{\skill}[2]{%
+  \textbf{#1}&\parbox[t]{14.8cm}{%
+    #2\vspace{12pt}%
+  }\\}
+
+\begin{document}
+
+%make bigger font and gap so computing goes on next page
+\newcommand{\infoheader}{
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+ \multicolumn{2}{c}{\textbf{\Huge Phil Symonds}}  \vspace{12pt}\\
+
+62a Cowley Mill Road             & +447581679305\\
+Uxbridge, UB8 2QE               & phil.h.symonds@gmail.com\\
+Middlesex, UK                   & https://github.com/phy6phs\\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+}
+
+\newcommand{\pagebreakwithheader}{\pagebreak\infoheader}
+
+\infoheader
+% 
+\resheading{Personal Profile}
+% \textbf{Interests:} Computers, Technology, Physics, Geography, Maps, Science,
+% Statistics, Programming, The Internet, Data Analysis, Skiing, Football, Travelling
+A highly versatile physics PhD student with an inquisitive mind and a passion for science and 
+innovation. Eager to use my four years particle physics related programming and analytical experience in ways that can be beneficial in a technological environment.
+
+%Energy is
+% something that will be needed in increasing amounts over the coming decades and
+% action needs to be taken now such that it remains readily available. Working at
+% SSE would give me an excellent opportunity to do this for years to come.
+
+
+\vspace{6pt}
+
+
+
+\resheading{Experience and Achievements}
+\begin{entrylist}
+  \entry
+    {09/2010 - 03/2014}
+    {European
+    Organization for Nuclear Research (CERN) - STFC funded placement}
+    {Geneva, Switzerland}
+    {
+    $\bullet$ \textbf{Analysed} large
+    data sets from the Compact Muon Solenoid (CMS) experiment to study
+    the properties of the top quark\\
+    $\bullet$ A framework has been developed using \textbf{C++} and
+    \textbf{Python} to mine and analyse the data \\
+    %Top quarks are produced very rarely at the Large Hadron
+    %Collider (LHC).
+    $\bullet$ 
+    \textbf{Statistical methods} such as boosted decision trees and multivariate
+    techniques are employed to enhance the signal to background ratio of the
+    data\\
+    $\bullet$ 
+    Physical information is extracted from the data using maximum
+    likelihood fits \\
+    $\bullet$ \textbf{Collaborate} with other analysis teams (detector and physics
+    object) to improve data quality algorithms\\
+    $\bullet$ Detailed accounts of the analysis have been documented in
+    internal notes \\
+	$\bullet$ Results have been \textbf{published} in the \emph{Physics Letters B}
+    journal\\
+    $\bullet$ \textbf{Presented} results at both national (Institute of Physics
+    2012, Queen Marys University) and international (European Physical Society 2013,
+    Stockholm) particle physics conferences\\
+	%Service work:
+%     $\bullet$ Used gaussian fits to test components of the
+%     CMS detector and it's response to radiation induced damage\\
+%     $\bullet$ Used specialized software to monitor parts of the detector whilst
+%     data was being taken\\
+    %Teach leader:
+    $\bullet$ Provide \textbf{tuition} to less experienced Ph.D.
+	students to help them develop the computational and analytical skills
+	required to succeed\\
+	$\bullet$ Involved in various physics \textbf{outreach} activities: \\
+    \hspace*{5 mm} $\bullet$ Wrote an extract on grid computing in the
+	\emph{Understanding the Higgs Boson} booklet \\
+	\hspace*{5 mm} $\bullet$ Helped develop the particlediscoveries.info website
+	\\
+	\hspace*{5 mm} $\bullet$ Assisted at the opening event of the London Science
+	Museum's LHC exhibition}
+\end{entrylist}
+
+
+\begin{entrylist}
+  \entry
+    {07/2009 -~08/2009}
+    {University of Leeds - Nuffield funded summer internship}
+    {Leeds, UK}
+    {$\bullet$ Studied the molecular physics of
+    cryopreservation in living systems\\
+    $\bullet$ Performed neutron scattering experiments at RAL to explore
+    hydrogen bonding in aqueous solutions}
+  \entry
+    {07/2008 -~08/2008}
+    {University of Leeds - EPSRC funded summer internship}
+    {Leeds, UK}
+    {$\bullet$ Research into drug delivery mechanisms across cell membranes \\
+    $\bullet$ Performed electrochemical impedance spectroscopy experiments to
+    determine what molecules work best for drug delivery \\
+    $\bullet$ This work was published in the \emph{ChemPhysChem} journal} 
+%   \entry
+%   	{11/2005 -~06/2006}
+%   	{Resorts of the Canadian Rockies}
+%   	{Lake Louise, Canada}
+%   	{$\bullet$ Worked for the food and beverage department in various mountain
+%   	restaurants}
+    
+\end{entrylist}
+
+\pagebreak 
+
+\resheading{Education}
+
+%remove UK if applying for UK job
+\begin{entrylist}
+  \entry
+    {09/2010 -~03/2014}
+    {Ph.D. in Experimental Particle Physics}
+    {Brunel University, UK}
+    {$\bullet$ Graduate in March 2014\\
+    $\bullet$ Attended various particle physics summer schools and lecture
+    courses at world class institutes including UCL, Oxford University and
+    Fermilab\\
+    $\bullet$ Participated in an object orientated C++ course at the
+    Rutherford Appleton Laboratory (RAL) }
+
+%     \\Summer 12: Attended \emph{The CERN-Fermilab Hadron Collider Physics
+% Summer     School} \\
+%     Summer 11: Attended \emph{RAL High Energy Physics Summer School}
+   
+  \entry
+    {09/2006 -~06/2010}
+    {M.Sc. in Physics with Astrophysics}
+    {University of Leeds, UK}
+    {$\bullet$ Graduated with a first class honours degree\\
+    $\bullet$ Awarded a scholarship for A-level %change to
+    % high school if alying for North America
+    results}
+  
+  \entry{09/2003 -~06/2005}{A-Levels}{Stanwell School, UK}{$\bullet$
+  Maths (A), Physics (A) and Psychology (A)}
+
+\end{entrylist}
+
+
+%\clearpage
+
+% \resheading{Key Skills}
+% 
+% \begin{entrylist}
+% 	\skill{Analytical:}{$\bullet$ Physics, being a mathematically rigorous
+% 	subject, has enabled me to quickly devise algorithms in
+% 	order to solve computational problems and save time\\
+% 	
+% % 	$\bullet$ Comfortable working with with large datasets and applying
+% % 	filters to the data such that only useful information is retained
+% %
+% 	}
+% 	\skill{Adaptability:}
+% 	{$\bullet$ Have become quick at learning new software and programming
+% 	languages in order to keep up-to-date with latest developments\\
+% 	$\bullet$ When starting my Ph.D., I learnt multiple software frameworks and
+% 	programming languages over the course of a few months}
+% 	\skill{Organisation:}
+% 	{$\bullet$ Appreciate the importance of well organised and documented code
+% 	such that it can be easily used by others}
+% 	\skill{Presentation:}
+% 	{$\bullet$ Was invited to present recent research on the top quark at the 2013 
+% 	European Physical Society conference in Stockholm}
+%	$\bullet$ Presented a research poster at TOP 2012, Winchester, England \\
+%	$\bullet$ Regularly give updates on analysis work to senior researchers in
+%	group meetings}
+% 	\skill{Teamwork:}
+% 	{
+% %	$\bullet$ Regularly in contact with collegues and worldwide collaborators via
+% %	various communication methods including virtual meetings on vidyo or skype\\
+% 	$\bullet$ Enjoy programming in teams using GitHub or SVN}
+% %	$\bullet$ Have written detailed documents describing complex physics analyses
+% %	and am currently in the process of writting my thesis}
+% % 	\skill{Intuition:}
+% % 	{$\bullet$ Highly proficient at finding solutions to problems independantly}
+% 	\skill{Leadership:}
+% 	{
+% %	$\bullet$ Currently give guidance to second year Ph.D. students on what
+% %	methods to use in their analyses\\
+% 	}
+% 	\skill{Outreach:}
+% 	{
+% % 	$\bullet$ Set and demonstrated how a particle physics detector (cloud chamber)
+% % 	works to secondary school students
+% 	}
+%\end{entrylist}
+
+
+\resheading{Computing}
+
+\begin{entrylist}
+	\skill
+	{Languages:}
+	{$\bullet$ Experienced in \textbf{C++} and \textbf{Python} and currently
+	learning \textbf{Java}}
+	\skill
+	{Software:}
+	{$\bullet$ CMSSW and ROOT (particle physics specific written in C++ and
+	Python)}
+	\skill
+	{Storage:}
+	{$\bullet$ Used CRAB (CMS software) to run over data stored at
+	\textbf{worldwide grid} sites and regularly remotely access storage elements}
+	\skill
+	{Operating Systems:}
+	{$\bullet$ Windows, Mac OS X and Linux: Ubuntu, Fedora}
+	\skill
+	{Web development:}
+	{$\bullet$ Familiar with \textbf{HTML} and looking forward to learning more}
+	\skill
+	{Version Control:}
+	{$\bullet$ Work in teams using \textbf{GitHub} or \textbf{SVN}}
+	\skill
+	{Scripting:}
+	{$\bullet$ Wrote scripts to automate the analysis using \textbf{Python},
+	\textbf{pearl} and \textbf{bash}}
+	\skill
+	{Other:}
+	{$\bullet$ Eclipse, Nedit, \LaTeX, Microsoft Office}
+\end{entrylist}
+
+
+\resheading{Additional Information}
+
+\begin{entrylist}
+% 	\skill
+% 	{Music: }
+% 	{$\bullet$ Enjoy going to gigs and listening to a eclectic mix
+% 	of music}
+	\skill
+	{Languages:}
+	{
+	$\bullet$ Currently attending an intermediate French course at Brunel
+	University}
+	\skill
+	{Travel:}
+	{$\bullet$ Organised various trips and excursions including a week long ski
+	trip for over 50 people whilst based at CERN}
+	\skill
+	{Sport:}
+	{$\bullet$ Elected sports officer of Leeds Physics society for three
+	years running (2007 - 2009)\\
+	$\bullet$ Member of cycling and climbing clubs at Brunel University
+	}
+%	$\bullet$ Staff vs. students football matches were a major highlight of each
+%	academic term}
+
+\end{entrylist}
+
+\resheading{References}
+
+Available on request
+
+\end{document}
